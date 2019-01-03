@@ -7,3 +7,7 @@ execute as @a[scores={y_pos=12..}] at @s run function gentleman-programmer:clear
 # the loop counter will no longer match the actual player's y-position, causing
 # them to dig too deeply.
 execute as @a[scores={y_pos=12..}] run scoreboard players remove @s y_pos 1
+
+# do something when the player right-clicks a carrot on a stick
+execute as @a[scores={used_stick=1..}] at @s run tp ^ ^1 ^5
+scoreboard players set @a[scores={used_stick=1..}] used_stick 0
