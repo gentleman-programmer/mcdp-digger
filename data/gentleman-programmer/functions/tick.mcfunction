@@ -18,3 +18,6 @@ scoreboard players set @a[scores={used_snoball=1..}] used_snoball 0
 
 # do something when the player throws an egg
 #execute as @e[type=minecraft:item,nbt={Item:{id: "minecraft:egg"}, OnGround: 1b}] at @s run summon minecraft:creeper ~ ~ ~ {Fuse:0,ExplosionRadius:1}
+
+# look for diamonds
+execute as @a at @s run function gentleman-programmer:probe_diamonds
